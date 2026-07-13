@@ -1,0 +1,6 @@
+# Never commit private keys or local backups
+ssh/id_*
+ssh/*.pem
+personal-backup*/
+*.gpg
+*.tar.gz

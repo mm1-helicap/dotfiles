@@ -1,0 +1,49 @@
+[user]
+    name = manikuttan
+    email = manikuttanmm@gmail.com
+
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[merge]
+    tool = meld
+    conflictstyle = zdiff3
+
+[diff]
+    tool = meld
+
+[difftool "meld"]
+    path = /usr/bin/meld
+    cmd = meld "$LOCAL" "$REMOTE"
+    dirCmd = meld "$LOCAL" "$REMOTE"
+    trustExitCode = true
+
+[difftool "bc"]
+    path = /usr/bin/bcompare
+
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+    trustExitCode = true
+
+[mergetool "bc"]
+    path = /usr/bin/bcompare
+    trustExitCode = true
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+    light = true
+
+[pull]
+    rebase = true
+
+[rerere]
+    enabled = false
