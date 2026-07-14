@@ -39,16 +39,6 @@ chmod +x "$DOTFILES_DIR/scripts/"*.sh
 link_file "$DOTFILES_DIR/scripts/change_wallpaper.sh" "$HOME/.local/bin/change_wallpaper.sh"
 link_file "$DOTFILES_DIR/scripts/tailscale-status-display-names.sh" "$HOME/.local/bin/tailscale-status-display-names.sh"
 
-if [ -d "$DOTFILES_DIR/nvim" ]; then
-  mkdir -p "$HOME/.config"
-  link_file "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
-fi
-
-if [ -d "$DOTFILES_DIR/tmux" ] && [ -f "$DOTFILES_DIR/tmux/tmux.conf" ]; then
-  mkdir -p "$HOME/.config/tmux"
-  link_file "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
-fi
-
 if [ -d "$DOTFILES_DIR/cursor/skills" ]; then
   link_dir_contents "$DOTFILES_DIR/cursor/skills" "$HOME/.cursor/skills"
 fi

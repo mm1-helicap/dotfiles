@@ -18,8 +18,6 @@ cd ~/.dotfiles
 | Shell | `bash/.bashrc`, `bash/.profile` | `~/.bashrc`, `~/.profile` |
 | Git | `git/.gitconfig` | `~/.gitconfig` |
 | Vim | `vim/.vimrc` | `~/.vimrc` |
-| Neovim | `nvim/` | `~/.config/nvim` |
-| Tmux | `tmux/tmux.conf` | `~/.config/tmux/tmux.conf` |
 | SSH template | `ssh/config.example` | `~/.ssh/config` (if missing) |
 | Scripts | `scripts/*.sh` | `~/.local/bin/` |
 | Cursor skills | `cursor/skills/`, `cursor/skills-cursor/` | `~/.cursor/skills/`, `~/.cursor/skills-cursor/` |
@@ -37,7 +35,7 @@ This backs up **personal SSH keys only** (not company keys). Private keys are ne
 ## Recommended packages (Ubuntu)
 
 ```bash
-sudo apt install git git-delta meld neovim docker.io jq xclip gnupg
+sudo apt install git git-delta meld docker.io jq xclip gnupg
 ```
 
 Optional tools referenced in `.bashrc`:
@@ -52,8 +50,7 @@ Optional tools referenced in `.bashrc`:
 1. Git email is set to `manikuttanmm@gmail.com` (change with `git config --global user.email` if needed)
 2. Restore SSH keys from encrypted backup (see above)
 3. Put wallpapers in `~/Pictures/wallpapers/walls/` for the `wallpaper` alias
-4. Install nvim plugins: open nvim and run `:Lazy sync`
-5. Test GitHub SSH: `ssh -T git@github.com`
+4. Test GitHub SSH: `ssh -T git@github.com`
 
 ## macOS configs (legacy)
 
